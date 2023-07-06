@@ -1,18 +1,26 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Add box-sizing to include padding and borders in the element's total width and height */
+  }
+  
+  html,
+  body {
+    height: 100%; /* Set the height of the HTML and body elements to 100% */
   }
   
   .container {
-    background-color:black;
-    height: 550px;
+    background-color: black;
+    min-height: 100%; /* Use min-height instead of fixed height to ensure it expands with content */
     width: 100%;
-    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Set the container to a flex container with vertical direction */
+    justify-content: space-between; /* Add space between header, main, and footer */
   }
   
   .header {
     border: 2px solid red;
-    height: 60px;
+    height: 100px;
     width: 100%;
     background-color: black;
     color: white;
@@ -21,13 +29,7 @@
     justify-content: center;
   }
   
-  a {
-    text-decoration: none;
-    color: white;
-  }s
-  
-  .logo{
-    /* background-image: url(/images/logo.jpg); */
+  .logo {
     height: 45px;
     width: 100px;
     border: 2px solid red;
@@ -36,7 +38,6 @@
   
   .nav {
     display: flex;
-    /* border: 2px solid red; */
     height: 45px;
     margin-left: 20px;
     padding: 10px;
@@ -45,19 +46,18 @@
   .menu {
     background-color: tomato;
     height: 50px;
-    /* border: 1px solid rgb(213, 14, 14); */
     border-radius: 5px;
     margin-left: 15px;
     display: flex;
     align-items: center;
     padding: 0 10px;
   }
+  
   .menu:hover {
-    background-color: darkorange; /* Change background color on hover */
+    background-color: darkorange;
   }
   
   .chart {
-    /* border: 2px solid red; */
     height: 45px;
     width: 100px;
     display: flex;
@@ -65,47 +65,30 @@
     align-items: center;
   }
   
-  .main{
+  .main {
     color: white;
-    height: 400px;
-    width:100%;
-    border: 2px solid red;
+    flex: 1; /* Use flex-grow to make the main section expand to fill remaining space */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-}
+  }
   
-.leftside {
+  .leftside,
+  .middleContainer,
+  .rightside {
     border: 2px solid red;
     margin: 10px;
-    background-color: blueviolet;
     justify-content: center;
     display: flex;
     height: 300px;
-    width: 150px;
-    margin-top: 20px;
   }
-  .middleContainer{
-    border: 2px solid red;
-    margin: 10px;
-    background-color: rgb(166, 47, 26);
-    justify-content: center;
-    display: flex;
-    height: 300px;
-    width: 300px;
-    margin-top: 20px;
-  }
-  .rightside{
-    border: 2px solid red;
-    margin: 10px;
-    background-color: rgb(217, 58, 161);
-    justify-content: center;
-    display: flex;
-    height: 300px;
-    width: 150px;
-    margin-top: 20px;
-  }
-  footer{
+  
+  footer {
     color: white;
+    background-color: black;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  
