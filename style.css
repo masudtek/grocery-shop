@@ -8,7 +8,11 @@
   body {
     height: 100%; /* Set the height of the HTML and body elements to 100% */
   }
-  
+  h1{
+    color:white;
+    text-align: center;
+    margin-bottom: 30px;
+  }
   .container {
     background-color: black;
     min-height: 100%; /* Use min-height instead of fixed height to ensure it expands with content */
@@ -92,6 +96,67 @@
     margin: 10px;
     justify-content: center;
     height: 600px;
+  }
+  .leftside ul li {
+    margin: 30px;
+    list-style-type: disc; /* Set the bullet style for the list */
+    padding-left: 30px; /* Add some left padding to create space between bullet and text */
+    margin-top: 10px;
+    width: 300px; /* Add margin at the top */
+  }
+  
+  .leftside ul li {
+    margin-bottom: 5px; /* Add some spacing between list items */
+  }
+  .rightside ol li {
+    margin: 30px;
+    padding-left: 20px; /* Add some left padding to create space between bullet and text */
+    margin-top: 10px; /* Add margin at the top */
+    width: 300px; /* Add margin at the top */
+    
+}
+  
+  .rightside ol li {
+    margin-bottom: 5px; /* Add some spacing between list items */
+  }
+  .form {
+    background-color: rgb(214, 135, 135);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .form label {
+    margin-bottom: 5px;
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .form button {
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form button:hover {
+    background-color: darkorange;
   }
   
   footer {
